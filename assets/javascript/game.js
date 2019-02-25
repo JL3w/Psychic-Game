@@ -17,7 +17,13 @@ var psychic = {
     }
 }
 
+var html =
+          "<H2>Wins: " + psychic.wins + "</h2>" +
+          "<h2>Losses: " + psychic.losses + "</h2>" +
+          "<h2>Guesses Left: " + psychic.guessesLeft + "</h2>" +
+          "<h2>Guessed so far: " + psychic.guessesSoFar + "<h2>";
 
+        document.querySelector("#game-content").innerHTML = html;
 
 document.onkeyup = function(event) {
     var guessedLetter = event.key.toLowerCase();
@@ -44,7 +50,7 @@ document.onkeyup = function(event) {
           "<H2>Wins: " + psychic.wins + "</h2>" +
           "<h2>Losses: " + psychic.losses + "</h2>" +
           "<h2>Guesses Left: " + psychic.guessesLeft + "</h2>" +
-          "<h2>Guesses so far: " + psychic.guessesSoFar + "<h2>";
+          "<h2>Guessed so far: " + psychic.guessesSoFar + "<h2>";
 
         document.querySelector("#game-content").innerHTML = html;
 }
